@@ -57,8 +57,10 @@ function disableCards() {
     matchesFound++;
 
     if (matchesFound === totalPairs) showConfetti();
+    setTimeout(() => {
+        resetBoard();
+    }, 500); // Matches the transition duration in CSS
 
-    resetBoard();
 }
 
 function resetBoard() {
